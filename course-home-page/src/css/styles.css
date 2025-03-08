@@ -1,83 +1,184 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: #4CAF50;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav {
     display: flex;
-    justify-content: center;
-    background: #333;
-}
-
-nav a {
+    align-items: center;
+    background-color: #003366;
     color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
+    padding: 10px;
 }
 
-nav a:hover {
-    background: #ddd;
-    color: black;
+header img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header span {
+    flex-grow: 1;
+    font-size: 1.5em;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #003366;
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #0055cc;
 }
 
 main {
     padding: 20px;
 }
 
+section {
+    margin-bottom: 20px;
+}
+
+.course-list, .course-cards {
+    list-style: none;
+    padding: 0;
+}
+
+.course-cards li {
+    background-color: #f0f0f0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #4CAF50;
+    background-color: #003366;
     color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
+    padding: 10px;
 }
 
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        padding: 10px;
-    }
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
+.filter-buttons button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    background-color: #003366;
+    color: white;
     cursor: pointer;
 }
 
-.hamburger div {
-    height: 3px;
-    width: 25px;
-    background: white;
-    margin: 4px 0;
+.filter-buttons button:hover {
+    background-color: #0055cc;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    nav {
-        display: none;
+    nav ul {
         flex-direction: column;
+        display: none;
     }
 
-    nav.active {
+    nav ul.active {
         display: flex;
     }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+}
+
+/* Specific Styles for the Screenshot Layout */
+header {
+    justify-content: space-between;
+}
+
+nav ul {
+    flex-wrap: wrap;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course-cards li {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    text-align: center;
+    background-color: #8B4513;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.course-cards li h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 5px 0;
 }
