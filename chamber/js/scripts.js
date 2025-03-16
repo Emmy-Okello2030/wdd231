@@ -1,85 +1,63 @@
-// Function to update the footer with the current year and last modified date
-function updateFooter() {
-    const currentYear = new Date().getFullYear();
-    document.getElementById('currentYear').textContent = currentYear;
-    document.getElementById('lastModified').textContent = `Last Update: ${document.lastModified}`;
+// Fetch and display members
+async function fetchMembers() {
+    try {
+        const response = await fetch('data/members.json');
+        if (!response.ok) {
+            throw new Error("Failed to fetch members data.");
+        }
+        const members = await response.json();
+        displayMembers(members);
+    } catch (error) {
+        console.error("Error fetching members:", error);
+    }
 }
 
-// Function to handle the responsive navigation menu
-function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('active');
-}
+function displayMembers(members) {
+    const container = document.getElementById('directory-container');
+    if (!container) {
+        console.error("Error: Container element not found.");
+        return;
+    }
 
-// Function to display course information
-function displayCourses() {
-    const courseList = document.querySelector('.course-list');
-    courses.forEach(course => {
-        const courseItem = document.createElement('li');
-        courseItem.innerHTML = `<h3>${course.title}</h3><p>${course.description}</p><span>${course.duration}</span>`;
-        courseList.appendChild(courseItem);
+    container.innerHTML = ''; // Clear existing content
+
+    members.forEach(member => {
+        const card = document.createElement('div');
+        card.classList.add('member-card');
+
+        const img = document.createElement('img');
+        img.src = `images/${member.image}`;
+        img.alt = member.name;
+        img.onerror = function() {
+            this.onerror = null;
+            this.src = 'images/default.png'; // Fallback image
+        };
+
+        card.appendChild(img);
+        card.innerHTML += `
+            <h3>${member.name}</h3>
+            <p>${member.address}</p>
+            <p>${member.phone}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+        `;
+        container.appendChild(card);
     });
 }
 
-// Function to filter courses
-function filterCourses(category) {
-    const courseCards = document.querySelector('.course-cards');
-    courseCards.innerHTML = '';
-    const filteredCourses = category === 'all' ? courses : courses.filter(course => course.category === category);
-    filteredCourses.forEach(course => {
-        const courseItem = document.createElement('li');
-        courseItem.innerHTML = `<h3>${course.title}</h3><p>${course.description}</p><span>${course.duration}</span>`;
-        courseCards.appendChild(courseItem);
-    });
-}
-
-// Sample course data
-const courses = [
-    {
-        title: "CSE 110",
-        description: "Introduction to Programming",
-        duration: "10 weeks",
-        category: "CSE"
-    },
-    {
-        title: "WDD 130",
-        description: "Web Development",
-        duration: "12 weeks",
-        category: "WDD"
-    },
-    {
-        title: "CSE 111",
-        description: "Data Science",
-        duration: "14 weeks",
-        category: "CSE"
-    },
-    {
-        title: "CSE 210",
-        description: "Advanced Programming",
-        duration: "10 weeks",
-        category: "CSE"
-    },
-    {
-        title: "WDD 131",
-        description: "Advanced Web Development",
-        duration: "12 weeks",
-        category: "WDD"
-    },
-    {
-        title: "WDD 231",
-        description: "Full Stack Development",
-        duration: "14 weeks",
-        category: "WDD"
-    }
-];
-
-// Event listeners for DOMContentLoaded and menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-    updateFooter();
-    displayCourses();
-
-    const menuButton = document.querySelector('.menu-button');
-    if (menuButton) {
-        menuButton.addEventListener('click', toggleMenu);
-    }
+// Toggle between grid and list views
+document.getElementById('grid-view')?.addEventListener('click', () => {
+    document.getElementById('directory-container')?.classList.add('grid-view');
+    document.getElementById('directory-container')?.classList.remove('list-view');
 });
+
+document.getElementById('list-view')?.addEventListener('click', () => {
+    document.getElementById('directory-container')?.classList.add('list-view');
+    document.getElementById('directory-container')?.classList.remove('grid-view');
+});
+
+// Footer dynamic content
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = document.lastModified;
+
+// Fetch members on page load
+fetchMembers();

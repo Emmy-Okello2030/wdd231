@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Business One",
+        "address": "123 Main St, City, State",
+        "phone": "123-456-7890",
+        "website": "https://businessone.com",
+        "image": "business1.png",  
+        "membership": "Gold"
+    },
+    {
+        "name": "Business Two",
+        "address": "456 Elm St, City, State",
+        "phone": "987-654-3210",
+        "website": "https://businesstwo.com",
+        "image": "business2.png",
+        "membership": "Silver"
+    }
+]
