@@ -1,64 +1,7 @@
-// Fetch and display members
-async function fetchMembers() {
-    try {
-        const response = await fetch('data/members.json');
-        if (!response.ok) {
-            throw new Error("Failed to fetch members data.");
-        }
-        const members = await response.json();
-        displayMembers(members);
-    } catch (error) {
-        console.error("Error fetching members:", error);
-    }
-}
-
-function displayMembers(members) {
-    const container = document.getElementById('directory-container');
-    if (!container) {
-        console.error("Error: Container element not found.");
-        return;
-    }
-
-    container.innerHTML = ''; // Clear existing content
-
-    members.forEach(member => {
-        const card = document.createElement('div');
-        card.classList.add('member-card');
-
-        const img = document.createElement('img');
-        img.src = `images/${member.image}`;
-        img.alt = member.name;
-        img.onerror = function() {
-            this.onerror = null;
-            this.src = 'images/default.png'; // Fallback image
-        };
-
-        card.appendChild(img);
-        card.innerHTML += `
-            <h3>${member.name}</h3>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">Visit Website</a>
-        `;
-        container.appendChild(card);
-    });
-}
-
-// Toggle between grid and list views
-document.getElementById('grid-view')?.addEventListener('click', () => {
-    document.getElementById('directory-container')?.classList.add('grid-view');
-    document.getElementById('directory-container')?.classList.remove('list-view');
-});
-
-document.getElementById('list-view')?.addEventListener('click', () => {
-    document.getElementById('directory-container')?.classList.add('list-view');
-    document.getElementById('directory-container')?.classList.remove('grid-view');
-});
-
 // Fetch and display weather data
 async function fetchWeather() {
-    const apiKey = 'your_openweathermap_api_key'; // Replace with your OpenWeatherMap API key
-    const city = 'Your City'; // Replace with your city
+    const apiKey = 'd892036b5d3bce014d5aeb6b0faeb534'; // Replace with your OpenWeatherMap API key
+    const city = 'Nairobi'; // Replace with your city
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
     try {
@@ -121,6 +64,5 @@ document.getElementById('currentYear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = document.lastModified;
 
 // Initialize functions on page load
-fetchMembers();
 fetchWeather();
 fetchSpotlight();
