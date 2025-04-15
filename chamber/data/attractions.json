@@ -1,0 +1,50 @@
+[
+    {
+      "name": "Uganda Museum",
+      "address": "Kira Road, Kampala",
+      "description": "Showcases Uganda's cultural heritage with historical artifacts.",
+      "image": "images/ugandanmuseum.jpeg"
+    },
+    {
+      "name": "Kasubi Tombs",
+      "address": "Kasubi Hill, Kampala",
+      "description": "UNESCO World Heritage Site and burial grounds for Buganda kings.",
+      "image": "images/kasumbitombs.jpeg"
+    },
+    {
+      "name": "Lake Victoria",
+      "address": "Southern Uganda",
+      "description": "Africa's largest lake offering beautiful beaches and water activities.",
+      "image": "images/lakevictoria.jpeg"
+    },
+    {
+      "name": "Ndere Cultural Centre",
+      "address": "Ntinda, Kampala",
+      "description": "Celebrates Uganda's diverse cultures through music and dance.",
+      "image": "images/nderecultural.jpeg"
+    },
+    {
+      "name": "Uganda Wildlife Center",
+      "address": "Entebbe",
+      "description": "Zoo and conservation center showcasing Uganda's wildlife.",
+      "image": "images/ugandawildlife.jpeg"
+    },
+    {
+      "name": "Bahai Temple",
+      "address": "Kikaya Hill, Kampala",
+      "description": "Africa's only Bahai temple with beautiful gardens.",
+      "image": "images/kikayahill.jpeg"
+    },
+    {
+      "name": "Owino Market",
+      "address": "St. Balikuddembe Market",
+      "description": "Largest market in Uganda offering everything from produce to clothing.",
+      "image":"images/balikudembemarket.jpeg"
+    },
+    {
+      "name": "Gaddafi Mosque",
+      "address": "Old Kampala Hill",
+      "description": "Uganda's largest mosque with capacity for 15,000 worshippers.",
+      "image": "images/oldkampalahill.jpeg"
+    }
+  ]

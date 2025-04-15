@@ -12,8 +12,7 @@
   <header>
     <div class="header-content">
       <div class="logo">
-        <!-- Replace logo.png with your own image -->
-        <img src="images\logo.jpeg" alt="TeamPulse Logo" width="100" height="100" loading="lazy" />
+        <img src="images/logo.jpeg" alt="TeamPulse Logo" width="100" height="100" loading="lazy" />
         <h1>Welcome to TeamPulse</h1>
       </div>
       <nav>
@@ -29,8 +28,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <!-- Replace hero.jpg with your own hero image -->
-    <img src="images\hero1.jpeg" alt="Team working together" class="hero-image" />
+    <img src="images/hero1.jpeg" alt="Team working together" class="hero-image" />
     <div class="hero-text">
       <h2>Empowering Teams for Success</h2>
       <p>Your journey to better collaboration starts here.</p>
@@ -42,20 +40,17 @@
     <h2>What We Offer</h2>
     <div class="feature-grid">
       <div class="feature-card">
-        <!-- Replace placeholder1.jpg with your own image -->
-        <img src="images\placeholder1.jpeg" alt="Task management illustration" />
+        <img src="images/placeholder1.jpeg" alt="Task management illustration" />
         <h3>Task Management</h3>
         <p>Organize your team's work effectively.</p>
       </div>
       <div class="feature-card">
-        <!-- Replace placeholder2.jpg with your own image -->
         <img src="images/placeholder2i.jpeg" alt="Progress tracking illustration" />
         <h3>Progress Tracking</h3>
         <p>Keep up with your team's progress in real time.</p>
       </div>
       <div class="feature-card">
-        <!-- Replace placeholder3.jpg with your own image -->
-        <img src="images\placeholder3.jpeg" alt="Collaboration tools illustration" />
+        <img src="images/placeholder3.jpeg" alt="Collaboration tools illustration" />
         <h3>Collaboration Tools</h3>
         <p>Stay connected and work better together.</p>
       </div>
@@ -67,12 +62,14 @@
     <div class="footer-content">
       <p>&copy; <span id="current-year"></span> Emily Okello | WDD 231 Project</p>
       <p><a href="attributions.html">Attributions</a></p>
+      <p id="lastModified"></p>
     </div>
   </footer>
 
-  <!-- JS for date -->
+  <!-- JS for date and last modified -->
   <script>
     document.getElementById("current-year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
   </script>
 </body>
 </html>
