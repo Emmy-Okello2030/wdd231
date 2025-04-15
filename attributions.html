@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attributions | TeamPulse</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images/logo.jpeg" alt="TeamPulse brand logo" width="100" height="100" loading="lazy" />
+        <h1>Attributions</h1>
+      </div>
+      <nav>
+        <button id="menu-button" aria-expanded="false" aria-label="Navigation Menu">☰</button>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="attributions">
+      <h2>Resource Credits</h2>
+      <p>This project uses the following third-party resources:</p>
+
+      <div class="attribution-grid">
+        <!-- Images -->
+        <div class="attribution-card">
+          <h3>Images</h3>
+          <ul>
+            <li>
+              <a href="images\hero1.jpeg" target="_blank" rel="noopener">Hero Image</a> - Homepage background
+            </li>
+            <li>
+              <a href="images\logo.jpeg" target="_blank" rel="noopener">Logo Image</a> - TeamPulse branding
+            </li>
+          </ul>
+        </div>
+
+        <!-- Icons -->
+        <div class="attribution-card">
+          <h3>Icons</h3>
+          <ul>
+            <li>
+              <a href="https://fontawesome.com/" target="_blank" rel="noopener">Font Awesome</a> - Menu icon
+            </li>
+            <li>
+              <a href="https://favicon.io/" target="_blank" rel="noopener">Favicon.io</a> - Site favicon
+            </li>
+          </ul>
+        </div>
+
+        <!-- Fonts -->
+        <div class="attribution-card">
+          <h3>Fonts</h3>
+          <ul>
+            <li>
+              <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener">Google Fonts - Roboto</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Code Sources -->
+        <div class="attribution-card">
+          <h3>Code</h3>
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a> - JavaScript references
+            </li>
+            <li>
+              <a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS-Tricks</a> - Layout techniques
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Emily Okello | WDD 231 Project</p>
+      <p><a href="attributions.html">Attributions</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+// Extract URL params and display
+const urlParams = new URLSearchParams(window.location.search);
+document.getElementById('form-result').innerHTML = `
+    <p>Name: ${urlParams.get('name')}</p>
+    <p>Email: ${urlParams.get('email')}</p>
+    <p>Message: ${urlParams.get('message')}</p>
+`;

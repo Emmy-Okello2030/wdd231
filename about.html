@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn about our project and mission" />
+  <title>About | TeamPulse</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="About TeamPulse" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://Emmy-Okello2030.github.io/wdd231/project/about.html" />
+  <meta property="og:image" content="https://Emmy-Okello2030.github.io/wdd231/project/images/about-preview.jpg" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <img src="images\hero.jpeg" alt="TeamPulse Logo" width="100" height="100" loading="lazy" />
+        <h1>TeamPulse</h1>
+      </div>
+      <nav>
+        <button id="menu-button" aria-expanded="false" aria-label="Navigation Menu">☰</button>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="hero-image">
+        <img src="images\logo.jpeg" alt="About TeamPulse" loading="lazy" />
+      </div>
+      <div class="hero-content">
+        <h2>Our Story</h2>
+        <p class="subtitle">How it all began and where we're going</p>
+      </div>
+    </section>
+
+    <section class="mission">
+      <div class="mission-content">
+        <h2>Our Mission</h2>
+        <p>
+            At TeamPulse, our mission is to empower teams with innovative digital solutions that foster collaboration, productivity, and growth. We believe that great ideas thrive in connected environments, so we strive to create tools that simplify communication, streamline workflows, and enhance project success. Our goal is to build a future where every team—big or small—can achieve more, together
+        </p>
+        <div class="mission-stats">
+          <div class="stat-card">
+            <span class="stat-number" id="projects-completed">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="happy-clients">0</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" id="team-members">0</span>
+            <span class="stat-label">Team Members</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid" id="team-container">
+        <!-- JavaScript will load team members here -->
+        <p>Loading team data...</p>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <h2>Our Journey</h2>
+      <div class="timeline-container">
+        <div class="timeline-event">
+          <div class="event-date">2020</div>
+          <div class="event-content">
+            <h3>Founded</h3>
+            <p>Started as a small project in a home office</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="event-date">2022</div>
+          <div class="event-content">
+            <h3>First Major Client</h3>
+            <p>Landed our first corporate contract</p>
+          </div>
+        </div>
+        <div class="timeline-event">
+          <div class="event-date">2023</div>
+          <div class="event-content">
+            <h3>Expanded Team</h3>
+            <p>Hired three new full-time developers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Emily Okello | WDD 231 Project</p>
+      <p><a href="attributions.html">Attributions</a></p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/about.js"></script>
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

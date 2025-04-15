@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TeamPulse | Home</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <!-- Header with Logo -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        <!-- Replace logo.png with your own image -->
+        <img src="images\logo.jpeg" alt="TeamPulse Logo" width="100" height="100" loading="lazy" />
+        <h1>Welcome to TeamPulse</h1>
+      </div>
+      <nav>
+        <button id="menu-button" aria-expanded="false" aria-label="Navigation Menu">☰</button>
+        <ul id="primary-nav">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Replace hero.jpg with your own hero image -->
+    <img src="images\hero1.jpeg" alt="Team working together" class="hero-image" />
+    <div class="hero-text">
+      <h2>Empowering Teams for Success</h2>
+      <p>Your journey to better collaboration starts here.</p>
+    </div>
+  </section>
+
+  <!-- About or Feature Section -->
+  <section class="features">
+    <h2>What We Offer</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <!-- Replace placeholder1.jpg with your own image -->
+        <img src="images\placeholder1.jpeg" alt="Task management illustration" />
+        <h3>Task Management</h3>
+        <p>Organize your team's work effectively.</p>
+      </div>
+      <div class="feature-card">
+        <!-- Replace placeholder2.jpg with your own image -->
+        <img src="images/placeholder2i.jpeg" alt="Progress tracking illustration" />
+        <h3>Progress Tracking</h3>
+        <p>Keep up with your team's progress in real time.</p>
+      </div>
+      <div class="feature-card">
+        <!-- Replace placeholder3.jpg with your own image -->
+        <img src="images\placeholder3.jpeg" alt="Collaboration tools illustration" />
+        <h3>Collaboration Tools</h3>
+        <p>Stay connected and work better together.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; <span id="current-year"></span> Emily Okello | WDD 231 Project</p>
+      <p><a href="attributions.html">Attributions</a></p>
+    </div>
+  </footer>
+
+  <!-- JS for date -->
+  <script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
